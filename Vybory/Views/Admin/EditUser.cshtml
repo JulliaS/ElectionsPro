@@ -1,0 +1,58 @@
+﻿@model Vybory.Models.User
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+<head>
+    <title>Гормадянин</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("StartAdminPage")">Початкова</a>
+    </div>
+    <div class="main2">
+        <form asp-action="EditCitizen" class="formclass">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Ім'я</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label">Прізвище</label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IPN" class="control-label">Ідентифікаційний номер</label>
+                <input asp-for="IPN" class="form-control" />
+                <span asp-validation-for="IPN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Пароль</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthday" class="control-label">День Народження</label>
+                <input asp-for="Birthday" class="form-control" />
+                <span asp-validation-for="Birthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleId" class="control-label">Роль ID</label>
+                <input asp-for="RoleId" class="form-control" />
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Зберегти" class="btn btn-default" />
+            </div>
+            <br />
+            <div class="form-group">
+                <a href="@Url.Action("AdminCitizen", "Admin")">Назад</a>
+            </div>
+        </form>
+    </div>
+</body>
+

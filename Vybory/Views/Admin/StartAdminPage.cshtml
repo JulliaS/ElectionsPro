@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "StartAdminPage";
+}
+
+<head>
+    <title>Головна</title>
+</head>
+<body>
+
+    <div class="header">
+        <a class="right_position" href="@Url.Action("Logout", "Account")">Вихід</a>
+        <a class="left_position" href="@Url.Action("VoteResults", "Vote")">Результати Виборів</a><br />
+    </div>
+    <div class="main2">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("InstructionFoVote", "Home")">Інструкції</a>
+                <a href="https://www.cvk.gov.ua/metod/kultura/npa/">Нормативно-правова база</a>
+                <a href="https://uk.wikipedia.org/wiki/Вибори_Президента_України">Довідкова інформація</a>
+            </div>
+        </div>
+        <div class="big_title">
+            <a href="@Url.Action("AdminElection", "Admin")">Інформація про вибори</a><br />
+            <a href="@Url.Action("AdminDistrict", "Admin")">Інформація про віртуальні округи</a><br />
+            <a href="@Url.Action("AdminPollingStation", "Admin")">Інформація про віртуальні дільниці</a><br />
+            <a href="@Url.Action("AdminCitizen", "Admin")">Інформація про громадянинів</a><br />
+            <a href="@Url.Action("AdminAppeal", "Admin")">Інформація про заяви</a><br />
+            <a href="@Url.Action("AdminAddress", "Admin")">Адреси</a><br />
+        </div>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>
