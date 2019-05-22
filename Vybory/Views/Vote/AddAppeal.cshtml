@@ -1,0 +1,42 @@
+﻿@model Vybory.Models.Appeal
+@{
+    ViewData["Title"] = "AddAppeal";
+}
+
+<head>
+    <title>Заява</title>
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2","Home")">Головна</a>
+    </div>
+    <div class="main2">
+        
+        <fieldset>
+            <form method="post">
+
+                <p>Подання заяви</p>
+                <div class="formclass form-horizontal">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Text">Введіть текст</label><br />
+                        <input style="width:400px; height:100px" type="text" asp-for="Text" />
+                        <span asp-validation-for="Text" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Подати заяву" class="btn" />
+                    </div>
+                    <div>
+                        <a href="@Url.Action("ChangeStatus","Vote")">Якщо хочете змінити статус, натисніть тут.</a>
+                    </div>
+                    
+                </div>
+            </form>
+        </fieldset>
+
+    </div>
+</body>
+

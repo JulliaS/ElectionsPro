@@ -1,0 +1,33 @@
+﻿@model Vybory.Models.Appeal
+@{
+    ViewData["Title"] = "ChangeStatus";
+}
+
+<head>
+    <title>Зміна статусу</title>
+</head>
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2","Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <fieldset>
+            <form method="post">
+
+                <p>Зміна статусу</p><br />
+                <div class="formclass form-horizontal">
+                    <div id="">
+                        <label>Змінити статус</label><br /><br />
+                        <input type="radio" name="status"  value="спостерігач" /> Спостерігач <br />
+                        <input type="radio" name="status" value="голова дільниці" /> Голова дільниці <br />
+                        <input type="radio" name="status"  value="голова округу" /> Голова округу <br />
+                       <br />
+                        <input type="submit" value="Змінити" />
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+
+    </div>
+</body>
+

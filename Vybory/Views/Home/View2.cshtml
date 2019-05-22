@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "View2";
+}
+
+<head>
+    <title>Вітаємо!</title>
+</head>
+<body>
+
+    <div class="header">
+      
+        <div class="right_position">
+            <a href="@Url.Action("Logout", "Account")">Вихід</a>
+            @if (ViewBag.Message == "6")
+            {
+                <input class="mybutton" type="button" id="ButtonFor1" onclick="window.location.href = '@Url.Action("Index", "Observer")'" value="Спостерігач" />
+            }
+            @if (ViewBag.Message == "2")
+            {
+                <input class="mybutton" type="button" id="ButtonFor2" onclick="window.location.href = '@Url.Action("Index", "DistricCherman")'" value="Голова окружної комісії" />
+            }
+            @if (ViewBag.Message == "3")
+            {
+                <input class="mybutton" type="button" id="ButtonFor3" onclick="window.location.href = '@Url.Action("Index", "PolStCherman")'" value="Голова дільничної комісії" />
+            }
+            @if (ViewBag.Message == "5")
+            {
+                <input class="mybutton" type="button" id="ButtonFor5" onclick="window.location.href = '@Url.Action("Index", "CVK")'" value="Голова ЦВК" />
+            }
+        </div>
+    </div>
+    <div class="main">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("InstructionFoVote", "Home")">Інструкції</a>
+                <a href="https://www.cvk.gov.ua/metod/kultura/npa/">Нормативно-правова база</a>
+                <a href="https://uk.wikipedia.org/wiki/Вибори_Президента_України">Довідкова інформація</a>
+            </div>
+        </div>
+        <p class="big_title">
+            Вибори президента України
+            <br /><div style="font-size:60px; text-align: center;">2024</div>
+        </p>
+    </div>
+    <div class="footer">
+        <a class="column" href="@Url.Action("InstructionFoVote")">Проголосувати</a>
+        <a class="column" href="@Url.Action("VoteResults", "Vote")">Результати</a>
+        <a class="column"  href="@Url.Action("AddAppeal", "Vote")">Подати заяву</a>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>

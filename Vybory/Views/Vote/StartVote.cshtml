@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Vybory.Models.User>
+@{
+    ViewData["Title"] = "StartVote";
+}
+
+<head>
+    <title>Бюлетень</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left_position">
+            <a href="@Url.Action("Index2", "Home")">Головна</a>
+        </div>
+    </div>
+    <div class="main2">
+        <form method="post" class="form-inline" id="form1">
+            <div>
+                @foreach (var user in Model)
+                {
+                    <input type="radio" name="cndt" asp-for="@user.Id" value="@user.Id" /> @user.Name @user.Surname <br />
+                }
+                <input type="radio" name="cndt" value="-1" /> Не підтримую жодного <br />
+
+
+                @if (string.IsNullOrEmpty(ViewBag.Message))
+                {
+                    <input type="submit" id="VoteButton" value="Проголосувати" />
+                }
+            </div>
+        </form>
+    </div>
+</body>
+
