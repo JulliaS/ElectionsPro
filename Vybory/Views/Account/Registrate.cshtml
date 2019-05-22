@@ -1,0 +1,59 @@
+﻿@model BLL.ViewModels.Registration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<head>
+    <title>Реєстрація</title>
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index","Home")">Головна</a>
+    </div>
+    <div class="main2 main4">
+        <form asp-action="Registrate" asp-controller="Account" asp-anti-forgery="true" method="post" class="myform">
+            @Html.ValidationMessage("RegistrationError")
+            <div class="validation" asp-validation-summary="ModelOnly" />
+            <div>
+                <p>Реєстрація</p>
+                <div class="form-group">
+                    <label asp-for="Id">ID</label><br />
+                    <input type="text" asp-for="Id" />
+                    <span asp-validation-for="Id" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name">Ім'я</label><br />
+                    <input type="text" asp-for="Name" />
+                    <span asp-validation-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Surname">Прізвище</label><br />
+                    <input type="text" asp-for="Surname" />
+                    <span asp-validation-for="Surname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="BirthDate">Дата Народження</label><br />
+                    <input type="date" asp-for="BirthDate" />
+                    <span asp-validation-for="BirthDate" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPN">Ідентифікаційний номер</label><br />
+                    <input type="text" asp-for="IPN" />
+                    <span asp-validation-for="IPN" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Пароль</label><br />
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Реєстрація" class="btn" />
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+

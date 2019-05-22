@@ -1,15 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Vybory.Models;
 
 namespace Vybory
 {
-    public class AppContext : DbContext
+    public class ElectionsContext : DbContext
     {
+        public ElectionsContext(DbContextOptions<ElectionsContext> options)
+            : base(options)
+        { }
+
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Appeal> Appeals { get; set; }
         public DbSet<AppealType> AppealTypes { get; set; }
@@ -31,7 +30,7 @@ namespace Vybory
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host = localhost; Port = 5432; Database = Votes; Username = postgres; Password = password");
+            optionsBuilder.UseNpgsql("Host = pg.lnu.algotester.com; Port = 47474; Database = Vybory; Username = vp19; Password = MmV6RD-92?c6fy6W");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
