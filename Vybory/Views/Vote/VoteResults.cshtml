@@ -1,0 +1,54 @@
+﻿@model Dictionary<string[], int>
+@{
+    ViewData["Title"] = "VoteResults";
+}
+
+<head>
+    <title>Результати</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2", "Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <table class="table table-bordered table-responsive table-hover">
+            <tr>
+                <th>Номер у Бюлетні</th>
+                <th>Ім'я</th>
+                <th>Прізвище</th>
+                <th>Голоси</th>
+                <th>Відсотки</th>
+            </tr>
+
+
+            @{ int sum = 0;
+                @foreach (KeyValuePair<string[], int> p in Model)
+                {
+                    sum += p.Value;
+                }
+
+                @foreach (KeyValuePair<string[], int> p in Model.OrderByDescending(x => x.Value))
+                {
+                    @if (@p.Key[1] == "None")
+                    {
+                        <tr>
+                            <td colspan="3">Не підтримали жодного кандидата</td>
+                            <td>@p.Value</td>
+                            <td>@Math.Round((p.Value * 100.0) / sum, 2)</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@p.Key[0]</td>
+                            <td>@p.Key[1]</td>
+                            <td>@p.Key[2]</td>
+                            <td>@p.Value</td>
+                            <td>@Math.Round((p.Value * 100.0) / sum, 2)</td>
+                        </tr>
+                    }
+                }}
+        </table>
+    </div>
+</body>

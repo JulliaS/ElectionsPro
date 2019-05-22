@@ -1,0 +1,37 @@
+﻿@model BLL.ViewModels.Login
+@{
+    ViewData["Title"] = "Login";
+}
+
+<head>
+    <title>Вхід</title>
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index","Home")">Головна</a>
+    </div>
+    <div class="main2 main4">
+        <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true" method="post" class="myform">
+            <div class="validation" asp-validation-summary="ModelOnly" />
+            <div>
+                <p>Вхід</p><br />
+                <div class="form-group">
+                    <label asp-for="UserLogin">Ідентифікаційний номер</label><br />
+                    <input type="text" asp-for="UserLogin" />
+                    <span asp-validation-for="UserLogin" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Пароль</label><br />
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Вхід" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+
