@@ -1,5 +1,5 @@
 # ElectionsPro
-Because of disability of resolving all the conflicts(it was imposible), we were not able to give you the full picture of out commits. However, we have made some global comits of each developer.
+Because of disability of resolving all the conflicts(it was imposible), we were not able to give you the full picture of out commits. However, we have created a new repo and made some global comits of each developer.
 Responsibilities:
 
 
