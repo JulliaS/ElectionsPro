@@ -1,0 +1,45 @@
+﻿@model Vybory.Models.Citizen
+@{
+    ViewData["Title"] = "EditCitizen";
+}
+
+<head>
+    <title>Громадянин</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index", "CVK")">Початкова</a>
+    </div>
+    <div class="main2">
+        <form asp-action="EditCitizen" class="formclass">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DistrictId" class="control-label">Округ ID - @Model.DistrictId</label>
+                <input type="hidden" asp-for="DistrictId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PollingStationId" class="control-label">Дільниця ID - @Model.PollingStationId</label>
+                <input type="hidden" asp-for="PollingStationId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ElectionId" class="control-label">Вибори ID - @Model.ElectionId</label>
+                <input type="hidden" asp-for="ElectionId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusId" class="control-label">Статус ID</label>
+                <input asp-for="StatusId" class="form-control" />
+                <span asp-validation-for="StatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Зберегти" class="btn btn-default" />
+            </div>
+            <br />
+            <div class="form-group">
+                <a href="@Url.Action("CVKCitizen", "CVK")">Назад</a>
+            </div>
+        </form>
+    </div>
+</body>
+

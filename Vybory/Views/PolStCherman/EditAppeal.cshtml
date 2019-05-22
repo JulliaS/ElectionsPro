@@ -1,0 +1,37 @@
+﻿@model Vybory.Models.Appeal
+@{
+    ViewData["Title"] = "EditAppeal";
+}
+
+<head>
+    <title>Заява</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index", "PolStCherman")">Початкова</a>
+    </div>
+    <div class="main2">
+        <form asp-action="EditCitizen" class="formclass">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ElectionId" />
+            <input type="hidden" asp-for="CitizenId" />
+            <input type="hidden" asp-for="PollingStationId" />
+            <input type="hidden" asp-for="Text" />
+            <div class="form-group">
+                <label asp-for="AppealTypeId" class="control-label">Тип Заяви ID</label>
+                <input asp-for="AppealTypeId" class="form-control" />
+                <span asp-validation-for="AppealTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Зберегти" class="btn btn-default" />
+            </div>
+            <br />
+            <div class="form-group">
+                <a href="@Url.Action("PolStChermanAppeal", "PolStCherman")">Назад</a>
+            </div>
+        </form>
+    </div>
+</body>
+

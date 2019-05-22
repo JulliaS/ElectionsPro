@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Vybory.Models.Appeal>
+@{
+    ViewData["Title"] = "PolStChermanAppeal";
+}
+
+<head>
+    <title>Заява</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index", "PolStCherman")">Початкова</a>
+    </div>
+    <div class="main2">
+        <table class="table table-bordered table-responsive table-hover formclass">
+            <tr>
+                <th>ID</th>
+                <th>Дільниця ID</th>
+                <th>Вибори ID</th>
+                <th>Громадянин ID</th>
+                <th>тип Заяви ID</th>
+                <th>Заява</th>
+            </tr>
+            @foreach (var appeal in Model)
+            {
+                <tr>
+                    <td>@appeal.Id</td>
+                    <td> @appeal.PollingStationId</td>
+                    <td>@appeal.ElectionId</td>
+                    <td> <a asp-action="EditCitizen" asp-route-id="@appeal.CitizenId">@appeal.CitizenId</a></td>
+                    <td>@appeal.AppealTypeId</td>
+                    <td>@appeal.Text</td>
+                    <td>
+                        <a asp-action="EditAppeal" asp-route-id="@appeal.Id">Редагувати</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+

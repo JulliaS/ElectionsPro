@@ -1,0 +1,232 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.mybutton {
+    background-color: darkgoldenrod;
+    color: black;
+    vertical-align: central;
+    border: none;
+}
+
+.header {
+    background-color: #2F4F4F;
+    padding: 20px, 5px;
+    font-size: initial;
+    color: gold;
+    width: 100vw;
+    height: 15vh;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.main {
+    background-image: url('../Images/prapor-ukrainy-3.jpg');
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+    width: 100vw;
+    height: 65vh;
+    top: 15vh;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main2 {
+    background-image: url('../Images/prapor-ukrainy-3.jpg');
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+    width: 100vw;
+    height: 85vh;
+    top: 15vh;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main3 {
+    background-image: url('../Images/insstruction.jpg');
+    background-repeat: repeat;
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+    width: 100vw;
+    height: 85vh;
+    top: 15vh;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main4{
+    position:absolute;
+    overflow-y:scroll;
+}
+
+.footer {
+    background-color: #2F4F4F;
+    padding: 20px, 5px;
+    color: gold;
+    width: 100vw;
+    height: 20vh;
+    top: 80vh;
+    position: fixed;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+}
+
+.header a {
+    font-size: inherit;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+
+.main a {
+    font-size: inherit;
+    color: gold;
+    font-style: inherit;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.main2 a {
+    font-size: inherit;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+
+.main3 a {
+    font-size: inherit;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+
+.footer a {
+    font-size: inherit;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+
+.header p {
+    font-size: 35px;
+    color: gold;
+}
+
+.footer p {
+    font-size: 35px;
+    color: gold;
+}
+
+.myform {
+    display: table;
+    vertical-align: middle;
+    padding: 10vh;
+    text-align: left;
+}
+
+input[type=submit] {
+    background-color: darkblue;
+    color: white;
+}
+
+.clock {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.right_position {
+    position: fixed;
+    margin-top: auto;
+    right: 10vw;
+    vertical-align: middle;
+    padding: 15px, 0px;
+    font-size: inherit;
+    color: inherit;
+}
+
+.left_position {
+    position: fixed;
+    margin-top: auto;
+    left: 10vw;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+}
+
+.center_position {
+    position: fixed;
+    margin-top: auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+}
+
+.big_title {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 45px;
+    font: bold;
+    color: inherit;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2F4F4F;
+    font-size: 20px;
+    min-width: 300px;
+    overflow: auto;
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: gold;
+        font-size: 20px;
+        padding: 5px 5px;
+        text-decoration: none !important;
+        display: inline-block;
+    }
+
+.show {
+    display: block;
+}

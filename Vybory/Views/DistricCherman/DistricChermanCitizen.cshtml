@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Vybory.Models.Citizen>
+@{
+    ViewData["Title"] = "DistricChermanCitizen";
+}
+
+<head>
+    <title>Громадяни</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index", "DistricCherman")">Початкова</a>
+    </div>
+    <div class="main2">
+        <table class="table table-bordered table-responsive table-hover formclass">
+            <tr>
+                <th>ID</th>
+                <th>Округ  ID</th>
+                <th>Дільниця ID</th>
+                <th>Вибори ID</th>
+                <th>Статус ID</th>
+            </tr>
+            @foreach (var citizen in Model)
+            {
+                <tr>
+                    <td><a asp-action="DetailUser" asp-route-id="@citizen.Id">@citizen.Id</a></td>
+                    <td> @citizen.DistrictId</td>
+                    <td> @citizen.PollingStationId</td>
+                    <td> @citizen.ElectionId</td>
+                    <td> @citizen.StatusId</td>
+                    <td>
+                        <a asp-action="EditCitizen" asp-route-id="@citizen.Id">Редагувати</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
