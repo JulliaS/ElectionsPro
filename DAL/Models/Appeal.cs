@@ -23,6 +23,7 @@ namespace Vybory.Models
         public int? AppealTypeId { get; set; }
         public AppealType AppealType { get; set; }
 
+        [Required(ErrorMessage ="Введіть текст")]
         public string Text { get; set;  }
     }
 }

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "InstructionFoVote";
+}
+
+<head>
+    <title>Інструкція</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left_position">
+            <a href="@Url.Action("Index2", "Home")">Головна</a>
+        </div>
+    </div>
+    <div class="main2">
+        <img src="~/images/insstruction.jpg" />
+        <button class="center-block" onclick="window.location.href = '@Url.Action("StartVote", "Vote")'">Бюлетень</button>
+    </div>
+</body>
+
